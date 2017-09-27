@@ -1,0 +1,25 @@
+{
+  "name": "formbuilder",
+  "version": "1.0.0",
+  "description": "Indio Coding Challenge - Dynamic Form Builder",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fernandojne20/FormBuilder.git"
+  },
+  "author": "Fernando Nuñez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fernandojne20/FormBuilder/issues"
+  },
+  "homepage": "https://github.com/fernandojne20/FormBuilder#readme",
+  "dependencies": {
+    "angular": "^1.6.5",
+    "angular-ui-bootstrap": "^2.5.0",
+    "angular-ui-router": "^1.0.3",
+    "ngstorage": "^0.3.11"
+  }
+}

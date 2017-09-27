@@ -1,0 +1,35 @@
+   <div class="square"> 
+   	<div class="input-group" ng-if="!data.root"> 
+           <span class="input-group-addon">condition:</span>
+           <select class="form-control" ng-model="data.selectedCondition"> 
+            	<option ng-repeat="condition in data.conditions" ng-value="condition">{{condition.label}} </option> 
+            </select> 
+            <input class="form-control" ng-model="data.selectedCondition.assignedValue" ng-if="data.parentTypeValue != 'radio'"> 
+             <select class="form-control" ng-model="data.selectedCondition.assignedValue" ng-if="data.parentTypeValue == 'radio'"> 
+            	<option value="true">yes </option> 
+             	<option value="false">No </option> 
+                
+            </select> 
+    </div> 
+    <br>
+    <div class="input-group"> 
+		<span class="input-group-addon">question:</span>
+		<input class="form-control" ng-model="data.name"> 
+    </div> 
+    <br>
+    <div class="input-group"> 
+            <span class="input-group-addon">Type: </span> 
+            <select class="form-control" ng-model="data.type"> 
+            	<option ng-repeat="type in typeConditions" ng-value="type">{{type.label}} </option>  
+            </select> 
+    </div>
+    <br> 
+    <button type="button" class="btn btn-primary" ng-click="add(data)">Add Sub-Input</button> 
+    <button type="button" class="btn btn-primary" ng-click="delete(data)" ng-show="data.nodes.length > 0">Delete</button> 
+    </div> 
+    <div class="card border-info mb-3 w-75">
+    	<ul class="list-group list-group-flush"> 
+        	<li class="list-group-item" ng-repeat="data in data.nodes" ng-include="'components/formBuilder/form_element.html'"></li> 
+    	</ul>	
+    </div>
+     
